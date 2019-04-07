@@ -3,8 +3,8 @@ A Simple HINDI POS Tagger based on NLTK Hindi Corpus
 
 ## Requirements:
 (Python Modules)
-* NLTK
-* Flask
+* NLTK [(Steps to install NLTK)](https://www.nltk.org/install.html)
+* Flask [(Steps to install Flask on python3)](http://flask.pocoo.org/docs/1.0/installation/)
 
 ## Steps to execute:
 Install the above Python Modules.
