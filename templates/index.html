@@ -1,0 +1,71 @@
+<html>
+	<head>
+		<title>
+			HINDI POS TAGGER
+		</title>
+		<link rel="stylesheet" type="text/css" href="theme.css">
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="container">
+			<div class="display-4 text-center">
+				<span> 
+					WELCOME TO HINDI POS TAGGER PROJECT
+				</span>
+				
+			</div>
+			
+			<div class="card text-center">
+				<form method="post" action="">
+					<div>
+						<input type="text" class="form-control form-control-lg" name='sentence' placeholder="Enter Hindi Sentences here..." required>
+					</div>
+					<div class="card-body">
+							<input class="btn btn-dark" type="submit" id="submit-button" name="submit" value="Submit">
+					</div>
+					
+				</form>
+			</div>
+			<div class="card text-center">
+				<div class="card-header">
+					<span class="h3">
+						Answer
+					</span> 
+				</div>
+				<div class="card-body" id="answer">
+					{% for tag in jsonObject.answer %}
+						<ul class="list-inline-item">
+							{{ tag[0] }} : {{ tag[1]}}
+						</ul>
+					{% endfor %}
+				</div>
+			</div>
+			
+			<div class="card text-center">
+				<div class="card-header">
+					<span class="h3">
+						Sample Sentences
+					</span> 
+				</div>
+				<div class="card-body">
+					{% for sentence in jsonObject.sentences %}
+					<ul>
+						{{ sentence }}
+					</ul>
+					{% endfor %}
+				</div>
+			</div>
+
+			
+		</div>
+		
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</body>
+</html>
